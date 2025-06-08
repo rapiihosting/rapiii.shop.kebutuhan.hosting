@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapii Store - Panel Pterodactyl & Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .product-category {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .category-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+        }
+        .product-list {
+            padding: 20px;
+        }
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        .product-name {
+            font-weight: bold;
+        }
+        .product-price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .benefits {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        .benefits li {
+            margin-bottom: 5px;
+        }
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+        }
+        .buy-btn {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .buy-btn:hover {
+            background-color: #27ae60;
+        }
+        .contact-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+        .whatsapp-btn {
+            display: block;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rapii Store</h1>
+            <p>Panel Pterodactyl & Various Digital Services</p>
+        </header>
+
+        <div class="product-category">
+            <div class="category-header">PANEL PTERODACTYL PUBLIC</div>
+            <div class="product-list">
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 1GB</span>
+                    <span class="product-price">200P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 2GB</span>
+                    <span class="product-price">300P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 3GB</span>
+                    <span class="product-price">400P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 4GB</span>
+                    <span class="product-price">500P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 5GB</span>
+                    <span class="product-price">600P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 6GB</span>
+                    <span class="product-price">700P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 7GB</span>
+                    <span class="product-price">800P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 8GB</span>
+                    <span class="product-price">900P</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 9GB</span>
+                    <span class="product-price">1.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 10GB</span>
+                    <span class="product-price">2.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM UNLI</span>
+                    <span class="product-price">3.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">PANEL PTERODACTYL PRIVATE</div>
+            <div class="product-list">
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 1GB</span>
+                    <span class="product-price">1.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 2GB</span>
+                    <span class="product-price">2.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 3GB</span>
+                    <span class="product-price">3.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 4GB</span>
+                    <span class="product-price">4.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 5GB</span>
+                    <span class="product-price">5.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 6GB</span>
+                    <span class="product-price">6.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 7GB</span>
+                    <span class="product-price">7.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 8GB</span>
+                    <span class="product-price">8.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 9GB</span>
+                    <span class="product-price">9.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM 10GB</span>
+                    <span class="product-price">10.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <div class="product-item">
+                    <span class="product-name">PANEL RAM UNLI</span>
+                    <span class="product-price">11.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">RESSELER PANEL</div>
+            <div class="product-list">
+                <div class="product-item">
+                    <span class="product-name">PRICE</span>
+                    <span class="product-price">5.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <ul class="benefits">
+                    <li>BISA OPEN SELLER PANEL 1GB - UNLI (PUBLIC & PRIVATE)</li>
+                    <li>BISA CREATE PANEL PUBLIC / PRIVATE SEPUASNYA</li>
+                    <li>DAPET 2 SERVER (V1, V2)</li>
+                    <li>PERMANEN</li>
+                    <li>ANTI PTPT KALO VPS MOKAD</li>
+                    <li>JAMIN BALMOD KLO USAHA+NIAT</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">ADMIN PANEL</div>
+            <div class="product-list">
+                <div class="product-item">
+                    <span class="product-name">PRICE</span>
+                    <span class="product-price">7.000</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <ul class="benefits">
+                    <li>BISA OPEN SELLER PANEL 1GB - UNLI (PUBLIC & PRIVATE)</li>
+                    <li>BISA OPEN RESELLER PANEL PUBLIC / PRIVATE</li>
+                    <li>BISA CREATE PANEL PUBLIC / PRIVATE SEPUASNYA</li>
+                    <li>DAPET 2 SERVER (V1, V2)</li>
+                    <li>PERMANEN</li>
+                    <li>ANTI PTPT KLO VPS MOKAD</li>
+                    <li>JAMIN BALMOD KALO USAHA+NIAT</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">PARTNER PANEL</div>
+            <div class="product-list">
+                <div class="product-item">
+                    <span class="product-name">PRICE</span>
+                    <span class="product-price">15K</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <ul class="benefits">
+                    <li>BISA OPEN SELLER PANEL 1GB - UNLI (PUBLIC & PRIVATE)</li>
+                    <li>BISA OPEN RESELLER PANEL PUBLIC / PRIVATE</li>
+                    <li>BISA OPEN ADMIN PANEL PUBLIC / PRIVATE</li>
+                    <li>BISA CREATE PANEL PUBLIC / PRIVATE SEPUASNYA</li>
+                    <li>BISA CREATE ADP PUBLIC / PRIVATE (WAJIB IJIN DULU!!)</li>
+                    <li>DAPET 2 SERVER (V1, V2)</li>
+                    <li>PERMANEN</li>
+                    <li>ANTI PTPT KALO VPS MOKAD</li>
+                    <li>JAMIN BALMOD KALO USAHA+NIAT</li>
+                    <li>FREE MURID SUNTIK</li>
+                    <li>BONUS DAPET SCRIPT BUG+MD</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">OWNER PANEL</div>
+            <div class="product-list">
+                <div class="product-item">
+                    <span class="product-name">PRICE</span>
+                    <span class="product-price">20K</span>
+                    <button class="buy-btn" onclick="showContact()">BELI</button>
+                </div>
+                <ul class="benefits">
+                    <li>BISA OPEN SELLER PANEL 1GB - UNLI (PUBLIC & PRIVATE)</li>
+                    <li>BISA OPEN RESELLER PANEL PUBLIC / PRIVATE</li>
+                    <li>BISA OPEN ADMIN PANEL PUBLIC / PRIVATE</li>
+                    <li>BISA OPEN PARTNER PANEL PUBLIC / PRIVATE</li>
+                    <li>BISA CREATE PANEL PUBLIC / PRIVATE SEPUASNYA</li>
+                    <li>BISA CREATE ADP PUBLIC / PRIVATE (WAJIB IJIN DULU!!)</li>
+                    <li>DAPET 2 SERVER (V1, V2)</li>
+                    <li>PERMANEN</li>
+                    <li>ANTI PTPT KALO VPS MOKAD</li>
+                    <li>JAMIN BALMOD KALO USAHA+NIAT</li>
+                    <li>FREE MURID NOKOS</li>
+                    <li>BONUS DAPET ALL SCRIPT BUG+MD+PUSHKONTAK+DLL</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">NOKOS WHATSAPP</div>
+            <div class="product-list">
+                <p>LIST NEGARA MURMER BY RAPII:</p>
+                <ul class="benefits">
+                    <li>INDONESIA</li>
+                    <li>PHILIPINA</li>
+                    <li>MALAYSIA</li>
+                    <li>TANZANIA</li>
+                    <li>UKRAINA</li>
+                    <li>HONGKONG</li>
+                    <li>VIETNAM</li>
+                    <li>KENYA</li>
+                    <li>ENGLAND</li>
+                    <li>NIGERIA</li>
+                    <li>EGYPT</li>
+                    <li>KAMBOJA</li>
+                    <li>LAOS</li>
+                    <li>AFRIKA</li>
+                    <li>GAMBIA</li>
+                    <li>COLOMBIA</li>
+                    <li>MOROCCO</li>
+                    <li>KANADA</li>
+                    <li>DAN LAIN SEBAGAINYA</li>
+                </ul>
+                <p class="note">MALES YAPPING, BTW INI YG HARGANYA DIBAWAH 10K YA, SEMUA TERGANTUNG STOK MASING MASING!!!</p>
+                <button class="buy-btn" onclick="showContact()" style="width: 100%; margin-top: 10px;">BELI NOKOS WHATSAPP</button>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">NOKOS TELEGRAM</div>
+            <div class="product-list">
+                <p>LIST NEGARA MURMER BY RAPII:</p>
+                <ul class="benefits">
+                    <li>INDONESIA</li>
+                    <li>MALAYSIA</li>
+                    <li>PHILIPINA</li>
+                    <li>MYANMAR</li>
+                    <li>KENYA</li>
+                    <li>TANZANIA</li>
+                    <li>VIETNAM</li>
+                    <li>NIGERIA</li>
+                    <li>EGYPT</li>
+                    <li>MACAO</li>
+                    <li>AFRIKA</li>
+                    <li>LAOS</li>
+                    <li>KOLOMBIA</li>
+                    <li>KANADA</li>
+                    <li>MOROCCO</li>
+                    <li>NEPAL</li>
+                    <li>BANGLADESH</li>
+                    <li>SUDAN</li>
+                    <li>DAN LAIN SEBAGAINYA</li>
+                </ul>
+                <p class="note">MALES YAPPING, BTW INI YG HARGANYA DIBAWAH 10K YA, SEMUA TERGANTUNG STOK MASING MASING!!!</p>
+                <button class="buy-btn" onclick="showContact()" style="width: 100%; margin-top: 10px;">BELI NOKOS TELEGRAM</button>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="category-header">OTHER PRODUK</div>
+            <div class="product-list">
+                <p>PRODUK LAINNYA BY RAPII:</p>
+                <ul class="benefits">
+                    <li>JASA MEMBUAT WEBSITE STORE HTML (BEBAS REQUEST)</li>
+                    <li>JASA MEMBUAT WEBSITE PAYMENT HTML (BEBAS REQUEST)</li>
+                    <li>JASA MEMBUAT SCRIPT DENGAN FITUR SEDIKIT, SUPAYA BUYER DAPAT BELAJAR MENGOTAK ATIK SCRIPT TERSEBUT SEPUASNYA SEKALIAN MEREKA BELAJAR</li>
+                    <li>JASA BUG PERNOMOR</li>
+                    <li>JASA PASANG BOT PERNOMOR</li>
+                    <li>JASA SEWA BOT</li>
+                    <li>JASA RUN SCRIPT BOT</li>
+                    <li>JASA SUNTIK FOLLOWER TIKTOK, INSTAGRAM, SALURAN WA, DLL, ADA JUGA LIKE DAN VIEWERS TIKTOK, DAN INSTAGRAM, DLL.</li>
+                </ul>
+                <button class="buy-btn" onclick="showContact()" style="width: 100%; margin-top: 10px;">PESAN JASA</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Rapii Store. All rights reserved.</p>
+            <p>Contact: [Your Contact Information Here]</p>
+        </footer>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Hubungi Kami via WhatsApp</h3>
+            <p>Silakan pilih nomor yang ingin dihubungi:</p>
+            <a href="https://wa.me/6283181728644" class="whatsapp-btn">WhatsApp 1: 0831-8172-8644</a>
+            <a href="https://wa.me/6287872891195" class="whatsapp-btn">WhatsApp 2: 0878-7289-1195</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to show contact modal
+        function showContact() {
+            document.getElementById('contactModal').style.display = 'block';
+        }
+
+        // Function to close modal
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('contactModal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+                  </html>
